@@ -152,13 +152,13 @@ nav a:hover {
 
 .sort-container {
   display: flex;
-  justify-content: center; /* dari flex-end ke center */
+  justify-content: center;
   align-items: center;
   margin: 0 20px 20px 20px;
   gap: 10px;
   font-weight: 500;
   color: #23125f;
-  flex-wrap: wrap; /* biar responsif di layar kecil */
+  flex-wrap: wrap;
 }
 
 .sort-container label {
