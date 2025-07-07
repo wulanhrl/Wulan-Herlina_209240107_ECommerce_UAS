@@ -1,234 +1,272 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+  <!-- Pengaturan dasar halaman: karakter dan tampilan responsive -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Blue Bag Wulan Store - Beranda</title>
+
+  <!-- Menghubungkan file CSS buatan sendiri -->
   <link rel="stylesheet" href="css/style.css" />
+  <!-- Font Awesome untuk ikon-ikon lucu di menu -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
- <!-- Hero Section -->
-  <section id="beranda">
-    <div class="hero">
-      <div class="overlay"></div>
-      <div class="hero-content">
-        <h1>Blue Bag Wulan Store</h1>
-        <h2>Tas Elegan & Berkualitas</h2>
-        <p>Kami menyediakan berbagai pilihan tas elegan dan berkualitas, cocok untuk segala suasana. Temukan tas impianmu sekarang juga!</p>
-        <a href="produk.html" class="btn">Belanja Sekarang!!</a>
-      </div>
+<!-- Bagian tampilan depan (hero) yang menyambut pengunjung -->
+<section id="beranda">
+  <div class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Blue Bag Wulan Store</h1>
+      <h2>Tas Elegan & Berkualitas</h2>
+      <p>Kami menyediakan berbagai pilihan tas elegan dan berkualitas, cocok untuk segala suasana. Temukan tas impianmu sekarang juga!</p>
+      <a href="produk.html" class="btn">Belanja Sekarang!!</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Navigasi -->
-  <header>
-    <nav>
-    <div class="logo">
-    <img src="image/logo.png" alt="Logo Blue Bag Wulan Store" />
+<!-- Bagian navigasi/menu utama untuk pindah halaman -->
+<header>
+  <nav>
+  <div class="logo">
+  <img src="image/logo.png" alt="Logo Blue Bag Wulan Store" />
+  </div>
+    <ul>
+      <li><a href="index.html"><i class="fa fa-home"></i> Beranda</a></li>
+      <li><a href="produk.html"><i class="fa fa-bag-shopping"></i> Produk</a></li>
+      <li><a href="keranjang.html"><i class="fa fa-cart-shopping"></i> Keranjang</a></li>
+      <li><a href="wishlist.html"><i class="fa fa-heart"></i> Wishlist</a></li>
+      <li><a href="kontak.html"><i class="fa fa-envelope"></i> Kontak</a></li>
+    </ul>
+
+    <!-- Kotak pencarian khusus untuk halaman produk -->
+    <div class="search-box">
+      <input type="text" placeholder="Cari produk...">
+      <button><i class="fas fa-search"></i></button>
     </div>
-      <ul>
-        <li><a href="index.html"><i class="fa fa-home"></i> Beranda</a></li>
-        <li><a href="produk.html"><i class="fa fa-bag-shopping"></i> Produk</a></li>
-        <li><a href="keranjang.html"><i class="fa fa-cart-shopping"></i> Keranjang</a></li>
-        <li><a href="wishlist.html"><i class="fa fa-heart"></i> Wishlist</a></li>
-        <li><a href="kontak.html"><i class="fa fa-envelope"></i> Kontak</a></li>
-      </ul>
-      <div class="search-box">
-        <input type="text" placeholder="Cari produk...">
-        <button><i class="fas fa-search"></i></button>
-      </div>
-    </nav>
-  </header>
+  </nav>
+</header>
   
-  <!-- Produk -->
-  <main>
-  <section id="produk">
-    <h1 class="judul-produk">Daftar Produk</h1>
-    <div class="product-grid">
+<!-- Bagian produk: menampilkan semua produk tas yang dijual -->
+<main>
+<section id="produk">
+  <h1 class="judul-produk">Daftar Produk</h1>
   
-      <div class="product">
-        <img src="image/tas1.jpg" alt="Tas Bahu Classic Sky">
-        <h3>Tas Bahu Classic Sky</h3>
-        <p>Model bahu simpel elegan, ringan dan stylish.</p>
-        <p>Rp250.000</p>
-        <button class="beli-btn" data-nama="Tas Bahu Classic Sky" data-harga="250000">Beli</button>
-      </div>
+  <!-- Tambahkan wadah untuk sorting -->
+  <div class="sort-container">
+    <label for="sort-produk">Urutkan berdasarkan:</label>
+    <select id="sort-produk">
+      <option value="default">Normal</option>
+      <option value="asc">Harga Termurah</option>
+      <option value="desc">Harga Termahal</option>
+    </select>
+  </div>
+
+  <!-- Grid produk -->
+  <div class="product-grid">
   
-      <div class="product">
-        <img src="image/tas2.jpg" alt="Tas Bahu Elegant Navy">
-        <h3>Tas Bahu Elegant Navy</h3>
-        <p>Model ramping dengan pengunci emas, tampilan chic.</p>
-        <p>Rp300.000</p>
-        <button class="beli-btn" data-nama="Tas Bahu Elegant Navy" data-harga="300000">Beli</button>
-      </div>
-  
-      <div class="product">
-        <img src="image/tas3.jpg" alt="Tas Bahu Sleek Blue">
-        <h3>Tas Bahu Sleek Blue</h3>
-        <p>Siluet ramping dan modern, cocok untuk daily looks.</p>
-        <p>Rp220.000</p>
-        <button class="beli-btn" data-nama="Tas Bahu Sleek Blue" data-harga="220000">Beli</button>
-      </div>
-  
-      <div class="product">
-        <img src="image/tas4.jpg" alt="Tas Bahu Gloss Navy">
-        <h3>Tas Bahu Gloss Navy</h3>
-        <p>Bahan glossy dan ringan, cocok untuk gaya casual formal.</p>
-        <p>Rp400.000</p>
-        <button class="beli-btn" data-nama="Tas Bahu Gloss Navy" data-harga="400000">Beli</button>
-      </div>
-  
-      <div class="product">
-        <img src="image/tas5.jpg" alt="Tas Cute Charms Sky">
-        <h3>Tas Cute Charms Sky</h3>
-        <p>Dengan gantungan bunga dan smiley, cocok untuk remaja.</p>
-        <p>Rp320.000</p> 
-        <button class="beli-btn" data-nama="Tas Cute Charms Sky" data-harga="320000">Beli</button>
-      </div>
-  
-      <div class="product">
-        <img src="image/tas6.jpg" alt="Tas Croco Texture Navy">
-        <h3>Tas Croco Texture Navy</h3>
-        <p>Tekstur kulit buaya, tampilan bold dan elegan.</p>
-        <p>Rp275.000</p>
-        <button class="beli-btn" data-nama="Tas Croco Texture Navy" data-harga="275000">Beli</button>
-      </div>
-  
-      <div class="product">
-        <img src="image/tas7.jpg" alt="Tas Butterfly Handle Blue">
-        <h3>Tas Butterfly Handle Blue</h3>
-        <p>Gagang kerut dan detail kupu-kupu emas, sangat estetik.</p>
-        <p>Rp230.000</p>
-        <button class="beli-btn" data-nama="Tas Butterfly Handle Blue" data-harga="230000">Beli</button>
-      </div>
-
-      <div class="product">
-        <img src="image/tas8.jpg" alt="Tas Quilted Navy Miu">
-        <h3>Tas Quilted Navy Miu</h3>
-        <p>Desain berkerut khas Miu Miu, cocok untuk fashionista.</p>
-        <p>Rp180.000</p>
-        <button class="beli-btn" data-nama="Tas Quilted Navy Miu" data-harga="180000">Beli</button>
-      </div>
-  
-      <div class="product">
-        <img src="image/tas9.jpg" alt="Tas Chanel Soft Blue">
-        <h3>Tas Chanel Soft Blue</h3>
-        <p>Desain quilted klasik, cocok untuk pesta atau acara spesial.</p>
-        <p>Rp490.000</p>
-        <button class="beli-btn" data-nama="Tas Chanel Soft Blue" data-harga="490000">Beli</button>
-      </div>
-
-      <div class="product">
-        <img src="image/tas10.jpg" alt="Tas Rantai Gold Navy">
-        <h3>Tas Rantai Gold Navy</h3>
-        <p>Aksen rantai emas, gaya mewah dan elegan.</p>
-        <p>Rp350.000</p>
-        <button class="beli-btn" data-nama="Tas Rantai Gold Navy" data-harga="350000">Beli</button>
-      </div>
-
-      <div class="product">
-        <img src="image/tas11.jpg" alt="Tas Manik Lilit Sky">
-        <h3>Tas Manik Lilit Sky</h3>
-        <p>Penuh detail manik dan pita lucu, pas untuk gaya cute.</p>
-        <p>Rp650.000</p>
-        <button class="beli-btn" data-nama="Tas Manik Lilit Sky" data-harga="650000">Beli</button>
-      </div>
-
-      <div class="product">
-        <img src="image/tas12.jpg" alt="Tas Suede Navy Minimalis">
-        <h3>Tas Suede Navy Minimalis</h3>
-        <p>Bahan suede navy gelap, cocok untuk tampilan santai berkelas.</p>
-        <p>Rp630.000</p>
-        <button class="beli-btn" data-nama="Tas Suede Navy Minimalis" data-harga="630000">Beli</button>
-      </div>
-
-      <div class="product">
-        <img src="image/tas13.jpg" alt="Tas Tangan Sky Classy">
-        <h3>Tas Tangan Sky Classy</h3>
-        <p>Tas tangan elegan biru muda, cocok untuk kerja atau meeting.</p>
-        <p>Rp700.000</p>
-        <button class="beli-btn" data-nama="Tas Tangan Sky Classy" data-harga="700000">Beli</button>
-      </div>
-
-      <div class="product">
-        <img src="image/tas14.jpg" alt="Tas Kerja Deep Navy">
-        <h3>Tas Kerja Deep Navy</h3>
-        <p>Desain kokoh dan premium, cocok untuk pekerja profesional.</p>
-        <p>Rp500.000</p>
-        <button class="beli-btn" data-nama="Tas Kerja Deep Navy" data-harga="500000">Beli</button>
-      </div>
-
-      <div class="product">
-        <img src="image/tas15.jpg" alt="Tas Selempang Glossy Sky">
-        <h3>Tas Selempang Glossy Sky</h3>
-        <p>Tas selempang mengkilap, tampil classy untuk acara formal.</p>
-        <p>Rp550.000</p>
-        <button class="beli-btn" data-nama="Tas Selempang Glossy Sky" data-harga="550000">Beli</button>
-      </div>
-
-      <div class="product">
-        <img src="image/tas16.jpg" alt="Tas Selempang Ribbon Navy">
-        <h3>Tas Selempang Ribbon Navy</h3>
-        <p>Sentuhan pita feminin, cocok untuk ngantor dan hangout.</p>
-        <p>Rp500.000</p>
-        <button class="beli-btn" data-nama="Tas Selempang Ribbon Navy" data-harga="500000">Beli</button>
-      </div>
-
-      <div class="product">
-        <img src="image/tas17.jpg" alt="Tas Ransel Sky Pocket">
-        <h3>Tas Ransel Sky Pocket</h3>
-        <p>Ransel biru muda dengan banyak kantong, cocok untuk sekolah atau kuliah.</p>
-        <p>Rp199.000</p>
-        <button class="beli-btn" data-nama="Tas Ransel Sky Pocket" data-harga="199000">Beli</button>
-      </div>
-
-      <div class="product">
-        <img src="image/tas18.jpg" alt="Tas Ransel Navy Rose">
-        <h3>Tas Ransel Navy Rose</h3>
-        <p>Warna navy dengan aksen pink, stylish dan nyaman untuk harian.</p>
-        <p>Rp280.000</p>
-        <button class="beli-btn" data-nama="Tas Ransel Navy Rose" data-harga="80000">Beli</button>
-      </div>
-
-      <div class="product">
-        <img src="image/tas19.jpg" alt="Tas Ransel Creamy Charm">
-        <h3>Tas Ransel Creamy Charm</h3>
-        <p>Tas Ransel Biru pastel berpadu putih, desain lucu dan feminin.</p>
-        <p>Rp215.000</p>
-        <button class="beli-btn" data-nama="Tas Ransel Creamy Charm" data-harga="215000">Beli</button>
-      </div>
-
-      <div class="product">
-        <img src="image/tas20.jpg" alt="Tas Ransel Bold Navy">
-        <h3>Tas Ransel Bold Navy</h3>
-        <p>Model simpel dan fungsional, pas untuk sekolah kuliah dan kerja santai.</p>
-        <p>Rp220.000</p>
-        <button class="beli-btn" data-nama="Tas Ransel Bold Navy" data-harga="220000">Beli</button>
-      </div>
-
+    <!-- Produk 1 -->
+    <div class="product">
+      <img src="image/tas1.jpg" alt="Tas Bahu Classic Sky">
+      <h3>Tas Bahu Classic Sky</h3>
+      <p>Model bahu simpel elegan, ringan dan stylish.</p>
+      <p>Rp250.000</p>
+      <button class="beli-btn" data-nama="Tas Bahu Classic Sky" data-harga="250000">Beli</button>
     </div>
+  
+    <!-- Produk 2 -->
+    <div class="product">
+      <img src="image/tas2.jpg" alt="Tas Bahu Elegant Navy">
+      <h3>Tas Bahu Elegant Navy</h3>
+      <p>Model ramping dengan pengunci emas, tampilan chic.</p>
+      <p>Rp300.000</p>
+      <button class="beli-btn" data-nama="Tas Bahu Elegant Navy" data-harga="300000">Beli</button>
+    </div>
+  
+    <!-- Produk 3 -->
+    <div class="product">
+      <img src="image/tas3.jpg" alt="Tas Bahu Sleek Blue">
+      <h3>Tas Bahu Sleek Blue</h3>
+      <p>Siluet ramping dan modern, cocok untuk daily looks.</p>
+      <p>Rp220.000</p>
+      <button class="beli-btn" data-nama="Tas Bahu Sleek Blue" data-harga="220000">Beli</button>
+    </div>
+  
+    <!-- Produk 4 -->
+    <div class="product">
+      <img src="image/tas4.jpg" alt="Tas Bahu Gloss Navy">
+      <h3>Tas Bahu Gloss Navy</h3>
+      <p>Bahan glossy dan ringan, cocok untuk gaya casual formal.</p>
+      <p>Rp400.000</p>
+      <button class="beli-btn" data-nama="Tas Bahu Gloss Navy" data-harga="400000">Beli</button>
+    </div>
+  
+    <!-- Produk 5 -->
+    <div class="product">
+      <img src="image/tas5.jpg" alt="Tas Cute Charms Sky">
+      <h3>Tas Cute Charms Sky</h3>
+      <p>Dengan gantungan bunga dan smiley, cocok untuk remaja.</p>
+      <p>Rp320.000</p> 
+      <button class="beli-btn" data-nama="Tas Cute Charms Sky" data-harga="320000">Beli</button>
+    </div>
+  
+    <!-- Produk 6 -->
+    <div class="product">
+      <img src="image/tas6.jpg" alt="Tas Croco Texture Navy">
+      <h3>Tas Croco Texture Navy</h3>
+      <p>Tekstur kulit buaya, tampilan bold dan elegan.</p>
+      <p>Rp275.000</p>
+      <button class="beli-btn" data-nama="Tas Croco Texture Navy" data-harga="275000">Beli</button>
+    </div>
+
+    <!-- Produk 7 -->
+    <div class="product">
+      <img src="image/tas7.jpg" alt="Tas Butterfly Handle Blue">
+      <h3>Tas Butterfly Handle Blue</h3>
+      <p>Gagang kerut dan detail kupu-kupu emas, sangat estetik.</p>
+      <p>Rp230.000</p>
+      <button class="beli-btn" data-nama="Tas Butterfly Handle Blue" data-harga="230000">Beli</button>
+    </div>
+
+    <!-- Produk 8 -->
+    <div class="product">
+      <img src="image/tas8.jpg" alt="Tas Quilted Navy Miu">
+      <h3>Tas Quilted Navy Miu</h3>
+      <p>Desain berkerut khas Miu Miu, cocok untuk fashionista.</p>
+      <p>Rp180.000</p>
+      <button class="beli-btn" data-nama="Tas Quilted Navy Miu" data-harga="180000">Beli</button>
+    </div>
+  
+    <!-- Produk 9 -->
+    <div class="product">
+      <img src="image/tas9.jpg" alt="Tas Chanel Soft Blue">
+      <h3>Tas Chanel Soft Blue</h3>
+      <p>Desain quilted klasik, cocok untuk pesta atau acara spesial.</p>
+      <p>Rp490.000</p>
+      <button class="beli-btn" data-nama="Tas Chanel Soft Blue" data-harga="490000">Beli</button>
+    </div>
+
+    <!-- Produk 10 -->
+    <div class="product">
+      <img src="image/tas10.jpg" alt="Tas Rantai Gold Navy">
+      <h3>Tas Rantai Gold Navy</h3>
+      <p>Aksen rantai emas, gaya mewah dan elegan.</p>
+      <p>Rp350.000</p>
+      <button class="beli-btn" data-nama="Tas Rantai Gold Navy" data-harga="350000">Beli</button>
+    </div>
+
+    <!-- Produk 11 -->
+    <div class="product">
+      <img src="image/tas11.jpg" alt="Tas Manik Lilit Sky">
+      <h3>Tas Manik Lilit Sky</h3>
+      <p>Penuh detail manik dan pita lucu, pas untuk gaya cute.</p>
+      <p>Rp650.000</p>
+      <button class="beli-btn" data-nama="Tas Manik Lilit Sky" data-harga="650000">Beli</button>
+    </div>
+
+    <!-- Produk 12 -->
+    <div class="product">
+      <img src="image/tas12.jpg" alt="Tas Suede Navy Minimalis">
+      <h3>Tas Suede Navy Minimalis</h3>
+      <p>Bahan suede navy gelap, cocok untuk tampilan santai berkelas.</p>
+      <p>Rp630.000</p>
+      <button class="beli-btn" data-nama="Tas Suede Navy Minimalis" data-harga="630000">Beli</button>
+    </div>
+
+    <!-- Produk 13 -->
+    <div class="product">
+      <img src="image/tas13.jpg" alt="Tas Tangan Sky Classy">
+      <h3>Tas Tangan Sky Classy</h3>
+      <p>Tas tangan elegan biru muda, cocok untuk kerja atau meeting.</p>
+      <p>Rp700.000</p>
+      <button class="beli-btn" data-nama="Tas Tangan Sky Classy" data-harga="700000">Beli</button>
+    </div>
+
+    <!-- Produk 14 -->
+    <div class="product">
+      <img src="image/tas14.jpg" alt="Tas Kerja Deep Navy">
+      <h3>Tas Kerja Deep Navy</h3>
+      <p>Desain kokoh dan premium, cocok untuk pekerja profesional.</p>
+      <p>Rp500.000</p>
+      <button class="beli-btn" data-nama="Tas Kerja Deep Navy" data-harga="500000">Beli</button>
+    </div>
+
+    <!-- Produk 15 -->
+    <div class="product">
+      <img src="image/tas15.jpg" alt="Tas Selempang Glossy Sky">
+      <h3>Tas Selempang Glossy Sky</h3>
+      <p>Tas selempang mengkilap, tampil classy untuk acara formal.</p>
+      <p>Rp550.000</p>
+      <button class="beli-btn" data-nama="Tas Selempang Glossy Sky" data-harga="550000">Beli</button>
+    </div>
+
+    <!-- Produk 16 -->
+    <div class="product">
+      <img src="image/tas16.jpg" alt="Tas Selempang Ribbon Navy">
+      <h3>Tas Selempang Ribbon Navy</h3>
+      <p>Sentuhan pita feminin, cocok untuk ngantor dan hangout.</p>
+      <p>Rp500.000</p>
+      <button class="beli-btn" data-nama="Tas Selempang Ribbon Navy" data-harga="500000">Beli</button>
+    </div>
+
+    <!-- Produk 17 -->
+    <div class="product">
+      <img src="image/tas17.jpg" alt="Tas Ransel Sky Pocket">
+      <h3>Tas Ransel Sky Pocket</h3>
+      <p>Ransel biru muda dengan banyak kantong, cocok untuk sekolah atau kuliah.</p>
+      <p>Rp199.000</p>
+      <button class="beli-btn" data-nama="Tas Ransel Sky Pocket" data-harga="199000">Beli</button>
+    </div>
+
+    <!-- Produk 18 -->
+    <div class="product">
+      <img src="image/tas18.jpg" alt="Tas Ransel Navy Rose">
+      <h3>Tas Ransel Navy Rose</h3>
+      <p>Warna navy dengan aksen pink, stylish dan nyaman untuk harian.</p>
+      <p>Rp280.000</p>
+      <button class="beli-btn" data-nama="Tas Ransel Navy Rose" data-harga="80000">Beli</button>
+    </div>
+
+    <!-- Produk 19 -->
+    <div class="product">
+      <img src="image/tas19.jpg" alt="Tas Ransel Creamy Charm">
+      <h3>Tas Ransel Creamy Charm</h3>
+      <p>Tas Ransel Biru pastel berpadu putih, desain lucu dan feminin.</p>
+      <p>Rp215.000</p>
+      <button class="beli-btn" data-nama="Tas Ransel Creamy Charm" data-harga="215000">Beli</button>
+    </div>
+
+    <!-- Produk 20 -->
+    <div class="product">
+      <img src="image/tas20.jpg" alt="Tas Ransel Bold Navy">
+      <h3>Tas Ransel Bold Navy</h3>
+      <p>Model simpel dan fungsional, pas untuk sekolah kuliah dan kerja santai.</p>
+      <p>Rp220.000</p>
+      <button class="beli-btn" data-nama="Tas Ransel Bold Navy" data-harga="220000">Beli</button>
+    </div>
+  </div>
 </section>
 </main>
 
-<!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-section">
-        <h4>Tentang Kami</h4>
-        <p>Kami menyediakan berbagai pilihan tas elegan dan berkualitas, cocok untuk segala suasana.</p>
-      </div>
+<!-- Bagian footer: info & hak cipta -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>Tentang Kami</h4>
+      <p>Kami menyediakan berbagai pilihan tas elegan dan berkualitas, cocok untuk segala suasana.</p>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Blue Bag Wulan Store. Hak Cipta Dilindungi.</p>
-    </div>
-  </footer>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Blue Bag Wulan Store. Hak Cipta Dilindungi.</p>
+  </div>
+</footer>
 
-<!-- Notifikasi -->
+<!-- Notifikasi untuk user saat produk ditambahkan ke keranjang atau wishlist -->
 <div class="notification" id="notif">Produk telah ditambahkan ke keranjang!</div>
 <div id="wishlist-notif" class="notification">Produk disimpan ke Wishlist!</div>
 
+<!-- Hubungkan file JavaScript untuk interaksi -->
 <script src="js/script.js"></script>
 </body>
 </html>

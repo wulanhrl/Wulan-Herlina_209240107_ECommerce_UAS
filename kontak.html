@@ -1,62 +1,70 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+  <!-- Pengaturan dasar halaman: karakter dan tampilan responsive -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Blue Bag Wulan Store - Beranda</title>
+
+  <!-- Menghubungkan file CSS buatan sendiri -->
   <link rel="stylesheet" href="css/style.css" />
+  <!-- Font Awesome untuk ikon-ikon lucu di menu -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
- <!-- Hero Section -->
-  <section id="beranda">
-    <div class="hero">
-      <div class="overlay"></div>
-      <div class="hero-content">
-        <h1>Blue Bag Wulan Store</h1>
-        <h2>Tas Elegan & Berkualitas</h2>
-        <p>Kami menyediakan berbagai pilihan tas elegan dan berkualitas, cocok untuk segala suasana. Temukan tas impianmu sekarang juga!</p>
-        <a href="produk.html" class="btn">Belanja Sekarang!!</a>
-      </div>
+<!-- Bagian tampilan depan (hero) yang menyambut pengunjung -->
+<section id="beranda">
+  <div class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Blue Bag Wulan Store</h1>
+      <h2>Tas Elegan & Berkualitas</h2>
+      <p>Kami menyediakan berbagai pilihan tas elegan dan berkualitas, cocok untuk segala suasana. Temukan tas impianmu sekarang juga!</p>
+      <a href="produk.html" class="btn">Belanja Sekarang!!</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Navigasi -->
-  <header>
-    <nav>
-    <div class="logo">
-    <img src="image/logo.png" alt="Logo Blue Bag Wulan Store" />
-    </div>
-      <ul>
-        <li><a href="index.html"><i class="fa fa-home"></i> Beranda</a></li>
-        <li><a href="produk.html"><i class="fa fa-bag-shopping"></i> Produk</a></li>
-        <li><a href="keranjang.html"><i class="fa fa-cart-shopping"></i> Keranjang</a></li>
-        <li><a href="wishlist.html"><i class="fa fa-heart"></i> Wishlist</a></li>
-        <li><a href="kontak.html"><i class="fa fa-envelope"></i> Kontak</a></li>
-      </ul>
-      <div class="search-box">
-      <input type="text" id="searchKontakInput" placeholder="Cari di kontak...">
-      <button><i class="fas fa-search"></i></button>
-    </nav>
-  </header>
+<!-- Bagian navigasi/menu utama untuk pindah halaman -->
+<header>
+  <nav>
+  <div class="logo">
+  <img src="image/logo.png" alt="Logo Blue Bag Wulan Store" />
+  </div>
+    <ul>
+      <li><a href="index.html"><i class="fa fa-home"></i> Beranda</a></li>
+      <li><a href="produk.html"><i class="fa fa-bag-shopping"></i> Produk</a></li>
+      <li><a href="keranjang.html"><i class="fa fa-cart-shopping"></i> Keranjang</a></li>
+      <li><a href="wishlist.html"><i class="fa fa-heart"></i> Wishlist</a></li>
+      <li><a href="kontak.html"><i class="fa fa-envelope"></i> Kontak</a></li>
+    </ul>
 
-  <!-- Kontak -->
+    <!-- Kotak pencarian kontak -->
+    <div class="search-box">
+    <input type="text" id="searchKontakInput" placeholder="Cari di kontak...">
+    <button><i class="fas fa-search"></i></button>
+  </nav>
+</header>
+
+<!-- Bagian utama untuk formulir kontak dan info kontak -->
 <main>
 <section id="kontak">
   <div class="container">
     <h2>Hubungi Kami</h2>
 
+    <!-- Formulir sederhana agar pengunjung bisa kirim pesan -->
     <div class="formulir-kontak">
     <h3>Formulir Pemesanan Kontak Pelanggan</h3>
-    <form>
-    <input type="text" name="nama" placeholder="Nama" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="pesan" placeholder="Pesan" rows="5" required></textarea>
-    <button type="submit">Kirim</button>
-    </form>
+      <form>
+        <input type="text" name="nama" placeholder="Nama" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="pesan" placeholder="Pesan" rows="5" required></textarea>
+        <button type="submit">Kirim</button>
+      </form>
     </div>
 
+    <!-- Info kontak langsung seperti email, WA, IG, dan alamat -->
     <div class="kontak-list">
     <h4>Kontak Kami</h4>
       <div class="kontak-item">
@@ -82,19 +90,20 @@
 </section>
 </main>
 
-<!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-section">
-        <h4>Tentang Kami</h4>
-        <p>Kami menyediakan berbagai pilihan tas elegan dan berkualitas, cocok untuk segala suasana.</p>
-      </div>
+<!-- Bagian footer: info & hak cipta -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>Tentang Kami</h4>
+      <p>Kami menyediakan berbagai pilihan tas elegan dan berkualitas, cocok untuk segala suasana.</p>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Blue Bag Wulan Store. Hak Cipta Dilindungi.</p>
-    </div>
-  </footer>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Blue Bag Wulan Store. Hak Cipta Dilindungi.</p>
+  </div>
+</footer>
 
+<!-- Hubungkan file JavaScript untuk interaksi -->
 <script src="js/script.js"></script>
 </body>
 </html>

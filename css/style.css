@@ -1,5 +1,7 @@
 /* ========== Halaman Beranda - Blue Bag Wulan Store ========== */
 
+/* Reset dasar: menghilangkan margin & padding bawaan browser */
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +9,7 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
+/* Warna latar dan teks umum */
 body {
   background-color: #f6f5fe;
   color: #23125f;
@@ -16,7 +19,7 @@ header, section {
   padding: 0;
 }
 
-/* Hero Section */
+/* ========== HERO SECTION (Bagian atas halaman) ========== */
 .hero {
   background: url('../image/hero-bg.jpg') no-repeat center center/cover;
   height: 100vh;
@@ -27,6 +30,7 @@ header, section {
   justify-content: center;
 }
 
+/* Overlay gelap agar teks di hero lebih terbaca */
 .hero .overlay {
   position: absolute;
   top: 0;
@@ -36,6 +40,7 @@ header, section {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* Isi dari hero section */
 .hero-content {
   position: relative;
   z-index: 1;
@@ -75,7 +80,7 @@ header, section {
   background-color: #81a4d6;
 }
 
-/* Navigasi */
+/* ========== NAVIGASI UTAMA ========== */
 .logo {
   display: flex;
   align-items: center;
@@ -112,6 +117,7 @@ nav a:hover {
   color: #fff;
 }
 
+/* Pencarian di bagian navigasi */
 .search-box {
   display: flex;
   gap: 5px;
@@ -137,10 +143,48 @@ nav a:hover {
   background-color: #23125f;
 }
 
+/* ========== HALAMAN PRODUK ========== */
 .judul-produk {
   text-align: center;
   font-size: 2rem;
   margin: 20px 0;
+}
+
+.sort-container {
+  display: flex;
+  justify-content: center; /* dari flex-end ke center */
+  align-items: center;
+  margin: 0 20px 20px 20px;
+  gap: 10px;
+  font-weight: 500;
+  color: #23125f;
+  flex-wrap: wrap; /* biar responsif di layar kecil */
+}
+
+.sort-container label {
+  font-size: 1rem;
+}
+
+#sort-produk {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #5594bb;
+  font-size: 0.95rem;
+  background-color: #fff;
+  color: #23125f;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .sort-container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 20px;
+  }
+
+  #sort-produk {
+    width: 100%;
+  }
 }
 
 .product-grid {
@@ -180,6 +224,22 @@ nav a:hover {
   cursor: pointer;
 }
 
+.wishlist-btn {
+  background: #81a4d6 !important;
+  color: #fff !important;
+}
+
+.wishlist-btn {
+  margin-left: 10px;
+  background: #81a4d6 !important;
+  color: #fff; 
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ========== HALAMAN KERANJANG ========== */
 .judul-keranjang {
   text-align: center;
   font-size: 2rem;
@@ -251,6 +311,7 @@ nav a:hover {
   background-color: #23125f;
 }
 
+/* ========== HALAMAN KONTAK ========== */
 #kontak {
   background-color: #f4f4f4;
   padding: 50px 20px;
@@ -291,6 +352,7 @@ nav a:hover {
   color: #23125f;
 }
 
+/* Form kontak sederhana */
 .formulir-kontak {
   margin-top: 40px;
   max-width: 500px;
@@ -337,7 +399,7 @@ nav a:hover {
   background-color: #ada6ff;
 }
 
-/* Footer */
+/* ========== FOOTER ========== */
 footer {
   background-color: #0e003f;
   color: white;
@@ -376,6 +438,7 @@ footer {
   margin-top: 15px;
 }
 
+/* ========== NOTIFIKASI & WISHLIST ========== */
 .notification {
   position: fixed;
   bottom: 20px;
@@ -426,7 +489,7 @@ footer {
   background-color: #22175a;
 }
 
-/* Modal Checkout */
+/* ========== MODAL CHECKOUT ========== */
 .modal {
   display: none;
   position: fixed;
@@ -465,6 +528,7 @@ footer {
   cursor: pointer;
 }
 
+/* ========== RESPONSIVE UNTUK LAYAR ========== */
 @media (max-width: 768px) {
   .wishlist-list li {
     flex-direction: column;
