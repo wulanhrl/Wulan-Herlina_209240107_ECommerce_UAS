@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   products.forEach(product => {
     const simpanBtn = document.createElement("button");
-    simpanBtn.textContent = "❤ Simpan";
+    simpanBtn.textContent = "💙 Simpan";
     simpanBtn.classList.add("wishlist-btn");
 
     simpanBtn.addEventListener("click", () => {
